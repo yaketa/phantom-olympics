@@ -1,7 +1,4 @@
 "use client"
-export default function PhantomOlympics() {
-    // ... コンポーネントの内容 ...
-  }
 
 import { useState, useEffect } from "react"
 import { kv } from '@vercel/kv'
@@ -12,13 +9,13 @@ import { MessageCircle, Copy, Check, BadgeCheck } from "lucide-react"
 
 const hiragana = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん"
 
-function getRandomItem(array: string[]): string {
-  return array[Math.floor(Math.random() * array.length)]
-}
+function getRandomItem<T>(array: T[]): T {
+    return array[Math.floor(Math.random() * array.length)]
+  }
 
-function getRandomHiragana(): string {
-  return getRandomItem(hiragana) + getRandomItem(hiragana)
-}
+  function getRandomHiragana(): string {
+    return getRandomItem(hiragana.split('')) + getRandomItem(hiragana.split(''))
+  }
 
 function getRandomEmoji(array: string[], count: number): string {
   return Array(count).fill(null).map(() => getRandomItem(array)).join('')
