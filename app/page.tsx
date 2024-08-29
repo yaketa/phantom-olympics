@@ -1,4 +1,4 @@
-import PhantomOlympics from '../components/PhantomOlympics'
+import PhantomOlympics from '@/components/PhantomOlympics'
 
 export default function Home() {
   return (

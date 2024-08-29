@@ -1,4 +1,7 @@
 "use client"
+export default function PhantomOlympics() {
+    // ... コンポーネントの内容 ...
+  }
 
 import { useState, useEffect } from "react"
 import { kv } from '@vercel/kv'
